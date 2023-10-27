@@ -74,7 +74,7 @@ function lalutheme_register_required_plugins() {
  
 require get_template_directory() . '/update/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'updatecheck.json',
+    'https://raw.githubusercontent.com/Gremza/bibla_devocion/main/updatecheck.json',
     __FILE__,
     'bibladevecion'
 );
