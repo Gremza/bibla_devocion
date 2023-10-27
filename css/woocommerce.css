@@ -1,0 +1,7 @@
+.quantity input{ height: 35px;}
+.related {
+    clear: both;
+}
+  li.product{
+    padding: 10px !important;
+  }

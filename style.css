@@ -1,0 +1,245 @@
+/*
+Theme Name: Bibla.al Devocion
+Theme URI: http://bibla.al
+Author: Marsel Preci
+Author URI: http://gremza.com/lalu
+Description: These is not just a  wordpress theme. Is a full options, all included website.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: unversial wordpress theme, general theme, gremza
+Text Domain: lalutheme
+*/
+
+ 
+#logo {
+    margin: 5px 0;
+	position:relative;
+	z-index:9;
+} 
+.vc_row, .row{
+	margin:auto 0 !important;
+	padding:auto 0 !important;
+}
+.aligncenter { 
+	margin:auto;
+}
+.right {
+    float: right;
+}
+.top-right .socialblock, .top-right div{
+    float:right;
+}
+.no-padding {
+    padding: 0 !important;
+}
+
+.post-categories li {
+    list-style: none;
+}
+
+ul.post-categories {
+    padding: 0;
+}
+
+.video-container {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 60%;
+    width: 100%;
+}
+
+.video-container iframe {
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    border: none;
+}
+
+.footer {
+    min-height: 200px; 
+    padding: 30px 0;
+	font-size:12px;
+}
+
+.subfooter {
+    padding: 10px 0; 
+
+}
+
+.footer h2{
+	color:#fff;
+    font-weight: bold;
+}
+.footer h2::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid white;
+  width: 20%;
+  position: relative;
+	bottom: -6px; /* your padding + border-width */
+}
+.footer li{
+	list-style:none;
+	padding:1px 0;
+	margin:0;
+	color:#fff;
+}
+.footer a{	color:#fff;}
+.footer ul{
+	margin:0;
+	padding:0;
+}
+  
+
+
+.right_subfooter, .right_subfooter a {
+    text-align: right;
+    color: #fff; 
+}
+.right_subfooter a,.left_subfooter a{
+    color:#fff; 
+    font-weight: bold;
+}
+.left_subfooter , .left_subfooter a{ 
+    color: #ccc;
+}
+
+
+
+.top-right {
+    text-align: right;
+}
+
+.socialblock a {
+    padding: 4px;
+}
+.searchbar{
+    float: right;
+}
+.footer h2{ font-weight:normal}
+
+.socialblock img {
+    vertical-align: top;
+}
+.socialblock img:hover, .socialblock svg:hover{
+    opacity: 0.7;
+}
+.wpcf7 input{
+    padding: 9px;
+    margin: 5px 0;
+    width: 200px;
+    border: 1px solid #ccc;
+}
+.wpcf7 textarea{
+   height:100px;
+   border: 1px solid #ccc;
+   margin: 5px 0;
+   width: 200px;
+}
+
+ 
+/*** back to top ************************************************************************************************************************************/
+ 
+.cd-top { 
+   display: inline-block;
+    border-radius: 3px; 
+    height: 46px;
+    width: 40px;
+    position: fixed; 
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); 
+    overflow: hidden; 
+    white-space: nowrap;
+    font-size: 23px;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    padding:9px;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+    
+  
+}
+.cd-top.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1; 
+  z-index: 2;
+}
+.cd-top.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .8;
+    
+}
+.no-touch .cd-top:hover {
+  filter: brightness(.8);
+  opacity: 1;
+	color:white;
+}
+@media only screen and (min-width: 768px) {
+  .cd-top {
+    right: 20px;
+    bottom: 20px;
+  }
+} 
+ 
+ 
+.notit{
+    margin-top:0px;
+}
+
+.footer .socialblock {
+    zoom: 150%;
+    padding: 30px 0 0 0;
+} 
+
+
+
+.alignright {
+    float: right;
+    margin-left: 2em;
+}
+.alignleft {
+    float: left;
+    margin-right: 2em;
+}   
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+   
+/* woocomerce */
+  .cart img{
+	min-width:150px;
+}
+
+
+.title {padding:50px;}
+.title h2{
+ 
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 2px solid #000; 
+	border-top: 2px solid #ccc; 
+   line-height: 0em;
+   margin: 10px 0 20px; 
+} 
+
+
+.title h2 span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+ 
+ 

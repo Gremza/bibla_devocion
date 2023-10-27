@@ -1,0 +1,28 @@
+@media (min-width: 601px) and (max-width: 1600px) {
+.dropdown-menu > li > a { 
+    padding: 3px 20px;
+}
+ 
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;   
+}
+
+.dropdown-menu > li > a { 
+    padding: 10px 20px;
+}
+
+
+
+
+}
