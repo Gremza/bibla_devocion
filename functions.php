@@ -76,7 +76,7 @@ require get_template_directory() . '/update/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     'https://raw.githubusercontent.com/Gremza/bibla_devocion/main/updatecheck.json',
     __FILE__,
-    'bibladevecion'
+    'lalutheme'
 );
   
 require get_template_directory() . '/include/wp_bootstrap_navwalker.php';
