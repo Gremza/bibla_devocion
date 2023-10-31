@@ -42,6 +42,14 @@ $img_verso_of_the_day=get_field('img_verso_of_the_day');
 },
 
 "stories":[{
+	"type": "text",
+ <?php if( $text= get_field('text1') ) :   echo '"title": "'.$text['title'].'",'; endif; ?>
+ <?php if( $text= get_field('text1') ) :   echo '"content": '. json_encode($text['content']).','; endif; ?>
+ <?php if( $text= get_field('text1') ) :   echo '"bg_color": "'.$text['bg_color'].'",'; endif; ?>
+ <?php if( $text= get_field('text1') ) :   echo '"txt_color": "'.$text['txt_color'].'",'; endif; ?>
+	"story_description": "Lutje"
+	} 
+,{
 	"type": "video", 
  	<?php if( $video= get_field('video1') ) :   echo '"link": "'.$video['video_url'].'"'; endif; ?>
 	},
@@ -54,15 +62,7 @@ $img_verso_of_the_day=get_field('img_verso_of_the_day');
  	"slug": "<?php global $post; echo $post_slug=$post->post_name;?>",
 	"story_description": "Devocion"
 	},
-	{
-	"type": "text",
- <?php if( $text= get_field('text1') ) :   echo '"title": "'.$text['title'].'",'; endif; ?>
- <?php if( $text= get_field('text1') ) :   echo '"content": '. json_encode($text['content']).','; endif; ?>
- <?php if( $text= get_field('text1') ) :   echo '"bg_color": "'.$text['bg_color'].'",'; endif; ?>
- <?php if( $text= get_field('text1') ) :   echo '"txt_color": "'.$text['txt_color'].'",'; endif; ?>
-	"story_description": "Lutje"
-	} 
-,
+	
 	{
 	"type": "verse",
 	"content": "<?php if (get_field('vargu1')) {  echo $vargu; }?>",
