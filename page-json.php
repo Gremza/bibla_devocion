@@ -41,27 +41,7 @@ $img_verso_of_the_day=get_field('img_verso_of_the_day');
 	
 },
 
-"stories":[{
-	"type": "text",
- <?php if( $text= get_field('text1') ) :   echo '"title": "'.$text['title'].'",'; endif; ?>
- <?php if( $text= get_field('text1') ) :   echo '"content": '. json_encode($text['content']).','; endif; ?>
- <?php if( $text= get_field('text1') ) :   echo '"bg_color": "'.$text['bg_color'].'",'; endif; ?>
- <?php if( $text= get_field('text1') ) :   echo '"txt_color": "'.$text['txt_color'].'",'; endif; ?>
-	"story_description": "Lutje"
-	} 
-,{
-	"type": "video", 
- 	<?php if( $video= get_field('video1') ) :   echo '"link": "'.$video['video_url'].'"'; endif; ?>
-	},
-	{
-	"type": "devotion",
-	<?php if( $artikull= get_field('devotion') ) :   echo '"title": "'.$artikull['title'].'",'; endif; ?>
-	<?php if( $artikull= get_field('devotion') ) :   echo '"content": '.   json_encode($artikull['content']).','; endif; ?>
- <?php if( $artikull= get_field('devotion') ) :   echo '"bg_color": "'.$artikull['bg_color'].'",'; endif; ?>
- <?php if( $artikull= get_field('devotion') ) :   echo '"txt_color": "'.$artikull['txt_color'].'",'; endif; ?>
- 	"slug": "<?php global $post; echo $post_slug=$post->post_name;?>",
-	"story_description": "Devocion"
-	},
+"stories":[
 	
 	{
 	"type": "verse",
@@ -72,6 +52,30 @@ $img_verso_of_the_day=get_field('img_verso_of_the_day');
 	"story_description": "Vargu i dites"
 	} 	
 ,
+	{
+	"type": "video", 
+ 	<?php if( $video= get_field('video1') ) :   echo '"link": "'.$video['video_url'].'"'; endif; ?>
+	},
+	
+	{
+	"type": "devotion",
+	<?php if( $artikull= get_field('devotion') ) :   echo '"title": "'.$artikull['title'].'",'; endif; ?>
+	<?php if( $artikull= get_field('devotion') ) :   echo '"content": '.   json_encode($artikull['content']).','; endif; ?>
+ <?php if( $artikull= get_field('devotion') ) :   echo '"bg_color": "'.$artikull['bg_color'].'",'; endif; ?>
+ <?php if( $artikull= get_field('devotion') ) :   echo '"txt_color": "'.$artikull['txt_color'].'",'; endif; ?>
+ 	"slug": "<?php global $post; echo $post_slug=$post->post_name;?>",
+	"story_description": "Devocion"
+	},
+	{
+	"type": "text",
+ <?php if( $text= get_field('text1') ) :   echo '"title": "'.$text['title'].'",'; endif; ?>
+ <?php if( $text= get_field('text1') ) :   echo '"content": '. json_encode($text['content']).','; endif; ?>
+ <?php if( $text= get_field('text1') ) :   echo '"bg_color": "'.$text['bg_color'].'",'; endif; ?>
+ <?php if( $text= get_field('text1') ) :   echo '"txt_color": "'.$text['txt_color'].'",'; endif; ?>
+	"story_description": "Lutje"
+	} 
+,
+	
 	{
 	"type": "image",
 	"image": "<?php if (get_field('img_verso_of_the_day')) {  echo $img_verso_of_the_day; }?>"
