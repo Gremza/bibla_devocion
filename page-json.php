@@ -45,10 +45,11 @@ $img_verso_of_the_day=get_field('img_verso_of_the_day');
 	
 	{
 	"type": "verse",
-	"content": "<?php if (get_field('vargu1')) {  echo $vargu; }?>",
+	"content": <?php if (get_field('vargu1')) {  echo json_encode($vargu) ; }?>,
 	<?php if( $link_vargu ['libri_emri'] !=':' ) : echo '"book_name":"'.$link_vargu['libri_emri'].'",'; endif; ?>
 	<?php if( $link_vargu ['nr_kapitulli'] !=':' ) : echo '"chapter_name":"'.$link_vargu['nr_kapitulli'].'",'; endif; ?>
 	<?php if( $link_vargu ['nr_vargu'] !=':' ) :   echo '"verse_number":"'.$link_vargu['nr_vargu'].'",'; endif; ?>
+	"txt_color": "<?php if (get_field('ngjyra_e_tekstit1')) {  echo $ngjyra_e_tekstit; }?>", 
 	"story_description": "Vargu i dites"
 	} 
 ,<?php if ($video['video_url']):?>	
