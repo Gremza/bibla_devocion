@@ -50,13 +50,13 @@ $img_verso_of_the_day=get_field('img_verso_of_the_day');
 	<?php if( $link_vargu ['nr_kapitulli'] !=':' ) : echo '"chapter_name":"'.$link_vargu['nr_kapitulli'].'",'; endif; ?>
 	<?php if( $link_vargu ['nr_vargu'] !=':' ) :   echo '"verse_number":"'.$link_vargu['nr_vargu'].'",'; endif; ?>
 	"story_description": "Vargu i dites"
-	} 	
-,
+	} 
+,<?php if ($video['video_url']):?>	
 	{
 	"type": "video", 
  	<?php if( $video= get_field('video1') ) :   echo '"link": "'.$video['video_url'].'"'; endif; ?>
 	},
-	
+	<?php endif;?><?php if ($artikull['content']):?>	
 	{
 	"type": "devotion",
 	<?php if( $artikull= get_field('devotion') ) :   echo '"title": "'.$artikull['title'].'",'; endif; ?>
@@ -65,7 +65,8 @@ $img_verso_of_the_day=get_field('img_verso_of_the_day');
  <?php if( $artikull= get_field('devotion') ) :   echo '"txt_color": "'.$artikull['txt_color'].'",'; endif; ?>
  	"slug": "<?php global $post; echo $post_slug=$post->post_name;?>",
 	"story_description": "Devocion"
-	},
+	},<?php endif;?>
+<?php if ($text['title']):?>
 	{
 	"type": "text",
  <?php if( $text= get_field('text1') ) :   echo '"title": "'.$text['title'].'",'; endif; ?>
@@ -74,12 +75,12 @@ $img_verso_of_the_day=get_field('img_verso_of_the_day');
  <?php if( $text= get_field('text1') ) :   echo '"txt_color": "'.$text['txt_color'].'",'; endif; ?>
 	"story_description": "Lutje"
 	} 
-,
+,<?php endif;?><?php if ($img_verso_of_the_day):?>
 	
 	{
 	"type": "image",
 	"image": "<?php if (get_field('img_verso_of_the_day')) {  echo $img_verso_of_the_day; }?>"
 	
-	} 		
+	} <?php endif;?>		
 	]}  
   <?php endwhile;?>
