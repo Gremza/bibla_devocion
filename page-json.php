@@ -34,7 +34,7 @@ $img_verso_of_the_day=get_field('img_verso_of_the_day');
 	"title": "<?php if (get_field('tema1')) {  echo $tema; }?>",
 	"content": "<?php if (get_field('vargu1')) {  echo $vargu; }?>",
 	"bg_image": "<?php if (get_field('bg_image1')) {  echo $bg_image; }?>", 
-	"txt_color": "<?php if (get_field('ngjyra_e_tekstit1')) {  echo $ngjyra_e_tekstit; }?>", 
+	"txt_color": "<?php if (get_field('ngjyra_e_tekstit')) {  echo $ngjyra_e_tekstit; }?>", 
 	<?php if( $link_vargu ['libri_emri'] !=':' ) : echo '"book_name":"'.$link_vargu['libri_emri'].'",'; endif; ?>
 	<?php if( $link_vargu ['nr_kapitulli'] !=':' ) : echo '"chapter_name":"'.$link_vargu['nr_kapitulli'].'",'; endif; ?>
 	<?php if( $link_vargu ['nr_vargu'] !=':' ) :   echo '"verse_number":"'.$link_vargu['nr_vargu'].'"'; endif; ?>
@@ -49,7 +49,8 @@ $img_verso_of_the_day=get_field('img_verso_of_the_day');
 	<?php if( $link_vargu ['libri_emri'] !=':' ) : echo '"book_name":"'.$link_vargu['libri_emri'].'",'; endif; ?>
 	<?php if( $link_vargu ['nr_kapitulli'] !=':' ) : echo '"chapter_name":"'.$link_vargu['nr_kapitulli'].'",'; endif; ?>
 	<?php if( $link_vargu ['nr_vargu'] !=':' ) :   echo '"verse_number":"'.$link_vargu['nr_vargu'].'",'; endif; ?>
-	"txt_color": "<?php if (get_field('ngjyra_e_tekstit1')) {  echo $ngjyra_e_tekstit; }?>", 
+ <?php if( $artikull= get_field('devotion') ) :   echo '"bg_color": "'.$artikull['bg_color'].'",'; endif; ?>
+ <?php if( $artikull= get_field('devotion') ) :   echo '"txt_color": "'.$artikull['txt_color'].'",'; endif; ?>
 	"story_description": "Vargu i dites"
 	} 
 ,<?php if ($video['video_url']):?>	
